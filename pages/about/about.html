@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - PenVibe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md">
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <a href="../../index.html" class="text-xl font-bold text-gray-800">PenVibe</a>
+        <ul class="hidden md:flex space-x-8">
+          <li>
+            <a href="../../index.html" class="text-gray-700 hover:text-blue-500"
+              >Home</a
+            >
+          </li>
+          <li><a href="#" class="text-blue-500">About</a></li>
+          <li>
+            <a href="../blog/blog.html" class="text-gray-700 hover:text-blue-500">Blog</a>
+          </li>
+          <li>
+            <a href="../contact/contact.html" class="text-gray-700 hover:text-blue-500">Contact</a>
+          </li>
+          <li>
+            <a href="../signIn/signIn.html" class="text-gray-700 hover:text-blue-500">Sign In</a>
+          </li>
+        </ul>
+        <div class="md:hidden">
+          <button id="menu-button" class="focus:outline-none">
+            <svg
+              class="w-6 h-6 text-gray-800"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+      <ul class="space-y-4 p-4">
+        <li><a href="../../index.html" class="text-gray-700 block">Home</a></li>
+        <li>
+          <a href="pages/about/about.html" class="text-gray-700 block">About</a>
+        </li>
+        <li><a href="../blog/blog.html" class="text-gray-700 block">Blog</a></li>
+        <li><a href="../contact/contact.html" class="text-gray-700 block">Contact</a></li>
+        <li><a href="../signIn/signIn.html" class="text-gray-700 block">Sign In</a></li>
+        
+      </ul>
+    </div>
+
+    <!-- About Section -->
+    <section class="bg-white py-12 md:py-20">
+      <div class="container mx-auto px-6 md:px-12 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          About Us
+        </h1>
+        <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-12">
+          Welcome to MyBlog! We're a team of passionate writers and content
+          creators dedicated to providing insightful articles on a wide range of
+          topics. Whether you're here for the latest news, lifestyle tips, or
+          personal growth advice, we strive to offer something for everyone.
+        </p>
+
+        <!-- Team Section -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          <!-- Team Member 1 -->
+          <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+            <img
+              src="https://via.placeholder.com/150"
+              alt="Team Member"
+              class="w-32 h-32 mx-auto rounded-full mb-4"
+            />
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Jane Doe</h3>
+            <p class="text-indigo-600 mb-4">Founder & Editor-in-Chief</p>
+            <p class="text-gray-600">
+              Jane is a seasoned writer with a deep passion for storytelling and
+              uncovering meaningful narratives.
+            </p>
+          </div>
+
+          <!-- Team Member 2 -->
+          <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+            <img
+              src="https://via.placeholder.com/150"
+              alt="Team Member"
+              class="w-32 h-32 mx-auto rounded-full mb-4"
+            />
+            <h3 class="text-xl font-bold text-gray-900 mb-2">John Smith</h3>
+            <p class="text-indigo-600 mb-4">Senior Content Writer</p>
+            <p class="text-gray-600">
+              John specializes in tech and lifestyle content, bringing fresh
+              perspectives to his articles.
+            </p>
+          </div>
+
+          <!-- Team Member 3 -->
+          <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+            <img
+              src="https://via.placeholder.com/150"
+              alt="Team Member"
+              class="w-32 h-32 mx-auto rounded-full mb-4"
+            />
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Emily White</h3>
+            <p class="text-indigo-600 mb-4">Community Manager</p>
+            <p class="text-gray-600">
+              Emily engages with our readers, ensuring the community remains
+              vibrant and interactive.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+          <p>&copy; 2024 PenVibe. All rights reserved.</p>
+          <div class="mt-4">
+            <a href="#" class="text-blue-400 hover:underline">Privacy Policy</a>
+            <span class="mx-2">|</span>
+            <a href="#" class="text-blue-400 hover:underline">Terms of Service</a>
+          </div>
+        </div>
+      </footer>
+  
+      <script>
+        const menuButton = document.getElementById("menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+  
+        menuButton.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      </script>
+  </body>
+</html>

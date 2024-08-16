@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PenVibe Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md">
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <a href="#" class="text-xl font-bold text-gray-800">PenVibe</a>
+        <ul class="hidden md:flex space-x-8">
+          <li><a href="../../index.html" class="text-blue-500">Home</a></li>
+          <li>
+            <a
+              href="../about/about.html"
+              class="text-gray-700 hover:text-blue-500"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="../blog/blog.html"
+              class="text-gray-700 hover:text-blue-500"
+              >Blog</a
+            >
+          </li>
+          <li>
+            <a
+              href="../contact/contact.html"
+              class="text-gray-700 hover:text-blue-500"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <div class="md:hidden">
+          <button id="menu-button" class="focus:outline-none">
+            <svg
+              class="w-6 h-6 text-gray-800"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+      <ul class="space-y-4 p-4">
+        <li><a href="../../index.html" class="text-gray-700 block">Home</a></li>
+        <li>
+          <a href="pages/about/about.html" class="text-gray-700 block">About</a>
+        </li>
+        <li>
+          <a href="pages/blog/blog.html" class="text-gray-700 block">Blog</a>
+        </li>
+        <li><a href="#" class="text-gray-700 block">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="flex min-h-screen">
+      <!-- Sidebar -->
+      <aside class="w-64 bg-white shadow-md hidden lg:block">
+        <div class="py-4">
+          <ul>
+            <li class="px-4 py-2 hover:bg-gray-200">
+              <a href="#" class="text-gray-700">Dashboard</a>
+            </li>
+            <li class="px-4 py-2 hover:bg-gray-200">
+              <a href="#" class="text-gray-700">Posts</a>
+            </li>
+            <li class="px-4 py-2 hover:bg-gray-200">
+              <a href="#" class="text-gray-700">Categories</a>
+            </li>
+            <li class="px-4 py-2 hover:bg-gray-200">
+              <a href="#" class="text-gray-700">Users</a>
+            </li>
+            <li class="px-4 py-2 hover:bg-gray-200">
+              <a href="#" class="text-gray-700">Settings</a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="flex-1 p-6">
+        <h1 class="text-2xl font-bold mb-4">Dashboard</h1>
+
+        <!-- Analytics / Posts Section -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Post Card -->
+          <div class="bg-white shadow-md p-4 rounded-lg">
+            <h2 class="text-lg font-semibold mb-2">Recent Posts</h2>
+            <p class="text-gray-600">Manage your latest blog posts here...</p>
+            <button
+              class="mt-4 bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600"
+            >
+              View Posts
+            </button>
+          </div>
+
+          <!-- Another Card -->
+          <div class="bg-white shadow-md p-4 rounded-lg">
+            <h2 class="text-lg font-semibold mb-2">Categories</h2>
+            <p class="text-gray-600">Organize your blog into categories...</p>
+            <button
+              class="mt-4 bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600"
+            >
+              Manage Categories
+            </button>
+          </div>
+
+          <!-- Another Card -->
+          <div class="bg-white shadow-md p-4 rounded-lg">
+            <h2 class="text-lg font-semibold mb-2">User Management</h2>
+            <p class="text-gray-600">
+              Manage your users and their permissions...
+            </p>
+            <button
+              class="mt-4 bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600"
+            >
+              View Users
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
