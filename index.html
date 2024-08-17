@@ -1,179 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PenVibe Home</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="bg-gray-100">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-md">
-      <div
-        class="container mx-auto px-4 py-4 flex justify-between items-center"
-      >
-        <a href="#" class="text-xl font-bold text-gray-800">PenVibe</a>
-        <ul class="hidden md:flex space-x-8">
-          <li><a href="#" class="text-blue-500">Home</a></li>
-          <li>
-            <a
-              href="pages/about/about.html"
-              class="text-gray-700 hover:text-blue-500"
-              >About</a
-            >
-          </li>
-          <li>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PenVibe Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-md">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="#" class="text-xl font-bold text-gray-800">PenVibe</a>
+      <ul class="hidden md:flex space-x-8">
+        <li>
+          <a href="pages/dashboard/dashboard.html" class="hidden text-gray-700 hover:text-blue-500"
+            id="dashboard">Dashboard</a>
+        </li>
+        <li><a href="#" class="text-blue-500">Home</a></li>
+        <li>
+          <a href="pages/about/about.html" class="text-gray-700 hover:text-blue-500">About</a>
+        </li>
+        <!-- <li>
             <a
               href="pages/blog/blog.html"
               class="text-gray-700 hover:text-blue-500"
               >Blog</a
             >
-          </li>
-          <li>
-            <a
-              href="pages/contact/contact.html"
-              class="text-gray-700 hover:text-blue-500"
-              >Contact</a
-            >
-          </li>
-          <li>
-            <a
-              href="pages/signIn/signIn.html"
-              class="text-gray-700 hover:text-blue-500"
-              >Sign In / Up</a
-            >
-          </li>
-          
-        </ul>
-        <div class="md:hidden">
-          <button id="menu-button" class="focus:outline-none">
-            <svg
-              class="w-6 h-6 text-gray-800"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16m-7 6h7"
-              ></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </nav>
+          </li> -->
+        <li>
+          <a href="pages/contact/contact.html" class="text-gray-700 hover:text-blue-500">Contact</a>
+        </li>
+        <li>
+          <a href="pages/signIn/signIn.html" class="text-gray-700 hover:text-blue-500" id="signIn">Sign In / Up</a>
+        </li>
+        <li>
+          <a onclick="signOut()" href="#" class="hidden text-gray-700 hover:text-blue-500" id="signOut">Log Out</a>
+        </li>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
-      <ul class="space-y-4 p-4">
-        <li><a href="#" class="text-gray-700 block">Home</a></li>
-        <li>
-          <a href="pages/about/about.html" class="text-gray-700 block">About</a>
-        </li>
-        <li>
-          <a href="pages/blog/blog.html" class="text-gray-700 block">Blog</a>
-        </li>
-        <li><a href="#" class="text-gray-700 block">Contact</a></li>
       </ul>
+      <div class="md:hidden">
+        <button id="menu-button" class="focus:outline-none">
+          <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
     </div>
+  </nav>
 
-    <!-- Hero Section -->
-    <header class="bg-blue-600 text-white py-16 text-center">
-      <h1 class="text-4xl font-bold">Welcome to PenVibe</h1>
-      <p class="mt-4 text-lg">
-        Sharing insights, thoughts, and stories that inspire.
-      </p>
-      <a
-        href="#"
-        class="mt-8 inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded hover:bg-gray-200"
-        >Explore Posts</a
-      >
-    </header>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+    <ul class="space-y-4 p-4">
+      <li><a href="pages/dashboard/dashboard.html" class="hidden text-gray-700 block" id="dashboard">Dashboard</a></li>
+      <li>
+      <li><a href="#" class="text-gray-700 block">Home</a></li>
+      <li>
+        <a href="pages/about/about.html" class="text-gray-700 block">About</a>
+      </li>
+      <li>
+        <a href="pages/createBlog/createBlog.html" class="hidden text-gray-700 block" id="createBlog">Create Blog</a>
+      </li>
+      <!-- <li>
+          <a href="pages/blog/blog.html" class="text-gray-700 block">Blog</a>
+        </li> -->
+      <li><a href="pages/contact/contact.html" class="text-gray-700 block">Contact</a></li>
+      <li><a href="pages/signIn/signIn.html" class="text-gray-700 block" id="signIn">Sign In / Up</a></li>
+      <li><a onclick="signout()" href="#" class="hidden text-gray-700 block" id="signout">Log Out</a></li>
+    </ul>
+  </div>
 
-    <!-- Blog Posts Preview -->
-    <main class="container mx-auto px-4 py-16">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Post 1 -->
-        <article class="bg-white shadow-md rounded-lg overflow-hidden">
-          <img
-            src="https://via.placeholder.com/400x200"
-            alt="Post Image"
-            class="w-full h-48 object-cover"
-          />
-          <div class="p-6">
-            <h2 class="text-xl font-bold text-gray-800">Post Title 1</h2>
-            <p class="mt-4 text-gray-600">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-              vitae est lorem.
-            </p>
-            <a href="#" class="block mt-4 text-blue-600 hover:underline"
-              >Read More</a
-            >
-          </div>
-        </article>
+  <!-- Hero Section -->
+  <header class="bg-blue-600 text-white py-16 text-center">
+    <h1 class="text-4xl font-bold">Welcome to PenVibe</h1>
+    <p class="mt-4 text-lg">
+      Sharing insights, thoughts, and stories that inspire.
+    </p>
+    <a href="#"
+      class="mt-8 inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded hover:bg-gray-200">Explore
+      Posts</a>
+  </header>
 
-        <!-- Post 2 -->
-        <article class="bg-white shadow-md rounded-lg overflow-hidden">
-          <img
-            src="https://via.placeholder.com/400x200"
-            alt="Post Image"
-            class="w-full h-48 object-cover"
-          />
-          <div class="p-6">
-            <h2 class="text-xl font-bold text-gray-800">Post Title 2</h2>
-            <p class="mt-4 text-gray-600">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-              vitae est lorem.
-            </p>
-            <a href="#" class="block mt-4 text-blue-600 hover:underline"
-              >Read More</a
-            >
-          </div>
-        </article>
-
-        <!-- Post 3 -->
-        <article class="bg-white shadow-md rounded-lg overflow-hidden">
-          <img
-            src="https://via.placeholder.com/400x200"
-            alt="Post Image"
-            class="w-full h-48 object-cover"
-          />
-          <div class="p-6">
-            <h2 class="text-xl font-bold text-gray-800">Post Title 3</h2>
-            <p class="mt-4 text-gray-600">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-              vitae est lorem.
-            </p>
-            <a href="#" class="block mt-4 text-blue-600 hover:underline"
-              >Read More</a
-            >
-          </div>
-        </article>
-      </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
-      <div class="container mx-auto px-4 text-center">
-        <p>&copy; 2024 PenVibe. All rights reserved.</p>
-        <div class="mt-4">
-          <a href="#" class="text-blue-400 hover:underline">Privacy Policy</a>
-          <span class="mx-2">|</span>
-          <a href="#" class="text-blue-400 hover:underline">Terms of Service</a>
+  <!-- Blog Posts Preview -->
+  <main class="container mx-auto px-4 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Post 1 -->
+      <article class="bg-white shadow-md rounded-lg overflow-hidden">
+        <img src="https://via.placeholder.com/400x200" alt="Post Image" class="w-full h-48 object-cover" />
+        <div class="p-6">
+          <h2 class="text-xl font-bold text-gray-800">Post Title 1</h2>
+          <p class="mt-4 text-gray-600">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+            vitae est lorem.
+          </p>
+          <a href="#" class="block mt-4 text-blue-600 hover:underline">Read More</a>
         </div>
+      </article>
+
+      <!-- Post 2 -->
+      <article class="bg-white shadow-md rounded-lg overflow-hidden">
+        <img src="https://via.placeholder.com/400x200" alt="Post Image" class="w-full h-48 object-cover" />
+        <div class="p-6">
+          <h2 class="text-xl font-bold text-gray-800">Post Title 2</h2>
+          <p class="mt-4 text-gray-600">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+            vitae est lorem.
+          </p>
+          <a href="#" class="block mt-4 text-blue-600 hover:underline">Read More</a>
+        </div>
+      </article>
+
+      <!-- Post 3 -->
+      <article class="bg-white shadow-md rounded-lg overflow-hidden">
+        <img src="https://via.placeholder.com/400x200" alt="Post Image" class="w-full h-48 object-cover" />
+        <div class="p-6">
+          <h2 class="text-xl font-bold text-gray-800">Post Title 3</h2>
+          <p class="mt-4 text-gray-600">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+            vitae est lorem.
+          </p>
+          <a href="#" class="block mt-4 text-blue-600 hover:underline">Read More</a>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; 2024 PenVibe. All rights reserved.</p>
+      <div class="mt-4">
+        <a href="#" class="text-blue-400 hover:underline">Privacy Policy</a>
+        <span class="mx-2">|</span>
+        <a href="#" class="text-blue-400 hover:underline">Terms of Service</a>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <script>
-      const menuButton = document.getElementById("menu-button");
-      const mobileMenu = document.getElementById("mobile-menu");
+  <script type="module" src="app.js"></script>
+  <script>
+    const menuButton = document.getElementById("menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
 
-      menuButton.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-      });
-    </script>
-  </body>
+    menuButton.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
+</body>
+
 </html>
